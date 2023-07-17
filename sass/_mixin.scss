@@ -1,0 +1,17 @@
+
+// flex
+@mixin d-flex($direction){
+  display: flex;
+  flex-direction: ($direction);
+}
+
+// super centered with grid
+@mixin super-centered{
+  display: grid;
+  place-items: center;
+} 
+
+// horizontal center 
+@mixin h-center{
+  margin: 0 auto;
+}

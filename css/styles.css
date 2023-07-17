@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap");
+.wrapper {
+  width: 80%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+}
