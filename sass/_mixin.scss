@@ -1,4 +1,4 @@
-
+@import './_variables';
 // flex
 @mixin d-flex($direction){
   display: flex;
@@ -14,4 +14,16 @@
 // horizontal center 
 @mixin h-center{
   margin: 0 auto;
+}
+
+// btn 
+
+@mixin btn{
+  background-color: $main-color;
+  color: white;
+}
+
+@mixin learn-more-btn{
+  color: $main-color;
+  font-weight: 600;
 }

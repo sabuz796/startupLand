@@ -1,15 +1,351 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap");
 
-@import './_variables';
-@import './_mixin';
+@import "./_variables";
+@import "./_mixin";
 
 // pre styling
-.wrapper{
+.wrapper {
   width: 80%;
   max-width: 120rem;
   margin: 0 auto;
 }
+.learn-more-btn{
+  @include learn-more-btn;
+}
 
-body{
-  font-family: 'DM Sans', sans-serif;
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+// header section
+
+.header-section {
+  .nav {
+    padding: 2rem 0;
+    @include d-flex(row);
+    justify-content: space-between;
+    align-items: center;
+
+    & > div {
+      @include d-flex(row);
+      align-items: center;
+      gap: 6rem;
+    }
+
+    .nav-list {
+      @include d-flex(row);
+      align-items: center;
+      gap: 2rem;
+
+      .lock {
+        margin-right: 0.6rem;
+        display: inline-block;
+        transform: translateY(0.2rem);
+      }
+
+      .nav-btn {
+        @include btn;
+        padding: 1rem 2rem;
+        border-radius: 0.4rem;
+      }
+    }
+  }
+
+  .hero-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    .hero-text{
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      width: 70%;
+      padding: 4rem 4rem;
+      border-radius: 1rem;
+    }
+
+    form {
+      // width: 70%;
+      .donate {
+        input {
+          margin-right: 0.4rem;
+        }
+      }
+
+      .donate-amount {
+        margin: 2rem 0;
+
+        label {
+          border: 0.1rem solid $main-color;
+          padding: 1rem 1rem;
+          cursor: pointer;
+          border-radius: 0.6rem;
+
+          &:not(:last-child) {
+            margin-right: 1rem;
+          }
+        }
+
+        input {
+          display: none;
+        }
+
+        .checked-amount {
+          background-color: rgba(162, 155, 254, 0.6);
+        }
+
+        input:focus {
+          color: red;
+        }
+      }
+
+      .other-amount {
+        // padding: 10rem;
+        input {
+          padding-left: 1rem;
+          height: 4rem;
+          border-radius: 0.6rem;
+          border: 0;
+          outline: 0;
+          border: 1px solid grey;
+        }
+        span{
+          position: relative;
+          right: 4rem;
+        }
+      }
+
+      .donate-btn-section {
+        @include d-flex(column);
+        span {
+          text-align: center;
+          margin: 1rem 0;
+        }
+        .btn {
+          @include btn;
+          // width: 42%;
+          text-align: center;
+          padding: 1rem 2rem;
+          border-radius: 0.6rem;
+
+        }
+      }
+    }
+  }
+}
+
+// services
+
+.service-section {
+  margin-top: 10rem;
+  .wrapper{
+    .service-slogan{
+      text-align: center;
+    }
+    .service-title{
+      text-align: center;
+      margin-bottom: 8rem;
+    }
+  }
+  
+  .services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    grid-row-gap: 4rem;
+    div{
+      @include super-centered;
+      h3{
+        margin: 1rem 0;
+      }
+      p{
+        width: 80%;
+        margin-bottom: .6rem;
+        
+      }
+    }
+
+    img {
+      margin: 0 auto;
+    }
+  }
+}
+
+// counter section
+.counter-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  // place-content: center;
+  text-align: center;
+  margin: 6rem;
+}
+
+// fund
+.fund {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    p{
+      margin: 2rem 0;
+    }
+  }
+}
+
+// map
+
+.map {
+  div{
+    .map-title,.map-text{
+      text-align: center;
+    }
+    .map-text{
+      margin-bottom: 8rem;
+    }
+    .map-title{
+      margin-bottom: 2rem;
+    }
+    img{
+      margin: 0 auto;
+    }
+  }
+ 
+  .collected-donation {
+    .progress-bar{
+      width: 100%;
+      // border-radius: 100px;
+      border-radius: 1rem;
+      background-color: grey;
+      margin: 1rem 0;
+      .bar{
+        background-color: white;
+        height: 4px;
+        width: 60%;
+        border-radius: 1rem;
+      }
+    }
+    
+    margin: 4rem 0;
+    background-image: url("../img/banner.png");
+    background-position: center;
+    background-size: cover;
+    padding: 16rem 0;
+    border-radius: 1rem;
+
+    // display: absolute;
+    & > div {
+      margin-left: auto;
+      width: 21%;
+      background-color: rgba(162, 155, 254, 0.9);
+      padding: 2rem;
+      text-align: center;
+      margin-right: 4rem;
+      color: white;
+      border-radius: .4rem;
+
+      a {
+        display: block;
+        background-color: #847fc3;
+        padding: 1rem 0;
+        margin-top: 1rem;
+        border-radius: 0.6rem;
+      }
+    }
+  }
+}
+
+// blog
+.blog {
+  .learn-more-btn{
+    margin-top: 1rem;
+    display: inline-block;
+  }
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 4rem;
+  img{
+    border-radius: 1rem;
+  }
+  
+  .multitask {
+    .school-bench {
+      background-image: url("../img/blog3.jpg");
+      background-position: center;
+      background-size: cover;
+      height: 50%;
+      width: 100%;
+      color: white;
+      border-radius: 1rem;
+      h2 {
+        position: relative;
+        top: 4rem;
+        left: 2rem;
+        font-size: 1.8rem;
+        top: 16rem;
+      }
+    }
+    .team {
+      background-image: url("../img/blog2.png");
+      background-position: center;
+      background-size: cover;
+      height: 50%;
+      width: 100%;
+      color: white;
+      border-radius: 1rem;
+      h2 {
+        position: relative;
+        top: 16rem;
+        left: 2rem;
+        font-size: 1.8rem;
+      }
+      margin-top: 4rem;
+    }
+  }
+}
+
+// footer 
+
+footer{
+  background-color: #353448;
+  margin-top: 10rem;
+  color: white;
+  .subscribe-container{
+    p{
+      margin: 1rem 0;
+    }
+    @include super-centered;
+    padding: 10rem 0;
+    .subscribe{
+      margin: 2rem 0;
+      input{
+        padding: .8rem;
+        border: 0;
+        outline: 0;
+        border: 1px solid grey;
+        border-radius: .4rem;
+      }
+      .subscribe-btn{
+        @include btn;
+        padding: 1rem;
+        border-radius: .4rem;
+        margin-left: 1rem;
+      }
+    }
+    
+  }
+  .footer-link{
+    background-color: #2B293E;
+    // padding: 2rem 0 !important;
+    padding: 2rem 8rem;
+    @include d-flex(row);
+    justify-content: space-between;
+    align-items: center;
+    .footer-logo{
+      @include d-flex(row);
+      // gap: 2rem;
+      align-items: center
+    }
+  }
+  .footer-nav-link{
+    @include d-flex(row);
+    align-items: center;
+    gap: 4rem;
+  }
 }
