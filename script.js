@@ -25,10 +25,24 @@ counterElements.forEach((el) => {
   IO.observe(el);
 });
 
+// nav bar
 const hamburgerMenu = document.querySelector(".hamburger-menu");
 const navContainer = document.querySelector(".nav-list-container");
 
 hamburgerMenu.addEventListener("click", () => {
   hamburgerMenu.classList.toggle("ph-x");
   navContainer.classList.toggle("menu-show");
+});
+
+// clicked and checked amount
+
+const boxes = document.querySelectorAll(".box");
+
+boxes.forEach((box) => {
+  box.addEventListener("click", () => {
+    boxes.forEach((otherBox) => {
+      otherBox.classList.remove("checked-amount");
+    });
+    box.classList.add("checked-amount");
+  });
 });

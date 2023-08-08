@@ -86,10 +86,101 @@
 }
 
 // Medium screens (e.g., landscape smartphones)
-@media (min-width: 577px) and (max-width: 768px){}
+@media (min-width: 577px) and (max-width: 768px){
+  .header-section{
+    .nav{
+      .nav-list-container{
+        flex-direction: column !important;
+        margin: 0 auto;
+        margin-top: 3rem;
+        display: none !important;
+      }
+      .nav-list{
+        flex-direction: column !important;
+        align-items: center;
+        margin: 0 auto;
+      }
+      .hamburger-menu{
+        display: block !important;
+      }
+    }
+    .hero-section{
+    grid-template-columns: 1fr !important;
+    .hero-text{
+      width: 100% !important;
+      margin-bottom: 4rem;
+    }
+    .other-amount{
+      span{
+        left: 48rem !important;
+      }
+    }
+    }
+  }
+  //
+  .fund {
+    .wrapper {
+      grid-template-columns: 1fr !important;
+    }
+  }
+  //
+  .map{
+    .collected-donation{
+        & > div{
+          width: 40% !important;
+        }     
+    }
+  }
+  //
+  .blog{
+    grid-template-columns: repeat(1,1fr) !important;
+    .multitask{
+      .team,.school-bench{
+      padding: 6rem 3rem;
+      }
+      .school-bench{
+        margin-top: 2rem;
+      }
+      h2{
+        top: 5rem !important;
+        left: 2rem;
+      }
+    }
+  }
+  footer{
+    margin-top: 10rem;
+    .footer-link{
+      flex-direction: column !important;
+      .footer-nav-link{
+        margin-top: 2rem;
+      }
+    }
+   
+  }
+
+}
 
 // Large screens (e.g., small tablets)
-@media (min-width: 769px) and (max-width: 991px){}
+@media (min-width: 769px) and (max-width: 991px){
+  .hero-section{
+    .hero-text{
+      width: 90% !important;
+    }
+    .hero-img{
+      width: 100% !important;
+    }
+    .other-amount{
+      span{
+        left: 24rem !important;
+      }
+    }
+    .nav{
+      .nav-list-container{
+        width: 73%;
+      }
+    }
+  }
+}
 
 // Laptops
 @media (min-width: 992px) and (max-width: 1199px){}

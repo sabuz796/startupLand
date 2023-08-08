@@ -21,7 +21,7 @@ body {
 
 .header-section {
   .nav {
-    padding: 2rem 0;
+    padding: 4rem 0;
     @include d-flex(row);
     align-items: center;
     justify-content: space-between !important;
@@ -60,14 +60,17 @@ body {
   }
 
   .hero-section {
+    margin-top: 4rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    align-items: center;
     .hero-text{
       box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
       width: 70%;
       padding: 4rem 4rem;
       border-radius: 1rem;
     }
+   
 
     form {
       // width: 70%;
@@ -90,18 +93,12 @@ body {
             margin-right: 1rem;
           }
         }
-
         input {
           display: none;
         }
-
         .checked-amount {
           background-color: rgba(162, 155, 254, 0.6);
         }
-
-        // input:focus {
-        //   color: red;
-        // }
       }
 
       .other-amount {
