@@ -109,14 +109,23 @@
     margin-bottom: 4rem;
   }
   .header-section .hero-section .other-amount span {
-    left: 48rem !important;
+    left: 32rem !important;
+  }
+  .service-section .services {
+    -ms-grid-columns: (1fr)[2] !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .counter-section {
+    gap: 2rem;
+    -ms-grid-columns: (1fr)[2] !important;
+        grid-template-columns: repeat(2, 1fr) !important;
   }
   .fund .wrapper {
     -ms-grid-columns: 1fr !important;
         grid-template-columns: 1fr !important;
   }
   .map .collected-donation > div {
-    width: 40% !important;
+    width: 50% !important;
   }
   .blog {
     -ms-grid-columns: (1fr)[1] !important;
@@ -143,6 +152,9 @@
   }
   footer .footer-link .footer-nav-link {
     margin-top: 2rem;
+  }
+  .header-section .hero-section .other-amount span {
+    left: 48rem !important;
   }
 }
 

@@ -1,164 +1,22 @@
 
 // Small screens (e.g., smartphones)
 @media (max-width: 576px){
-  .header-section{
-    .nav{
-      .nav-list-container{
-        flex-direction: column !important;
-        margin: 0 auto;
-        margin-top: 3rem;
-        display: none !important;
-      }
-      .nav-list{
-        flex-direction: column !important;
-        align-items: center;
-        margin: 0 auto;
-      }
-      .hamburger-menu{
-        display: block !important;
-      }
-    }
-    .hero-section{
-    grid-template-columns: 1fr !important;
-    .hero-text{
-      width: 100% !important;
-      margin-bottom: 4rem;
-    }
-    .other-amount{
-      span{
-        left: 32rem !important;
-      }
-    }
-    }
-  }
-  //
-  .service-section{
-    .services {
-      grid-template-columns: repeat(2,1fr) !important;
-      
-    }
-  }
-  //
-  .counter-section{
-    gap: 2rem;
-    grid-template-columns: repeat(2,1fr) !important;
-  }
-  //
-  .fund {
-    .wrapper {
-      grid-template-columns: 1fr !important;
-    }
-  }
-  // 
-  .map{
-    .collected-donation{
-        & > div{
-          width: 50% !important;
-        }     
-    }
-  }
-  //
-  .blog{
-    grid-template-columns: repeat(1,1fr) !important;
-    .multitask{
-      .team,.school-bench{
-      padding: 6rem 3rem;
-      }
-      .school-bench{
-        margin-top: 2rem;
-      }
-      h2{
-        top: 5rem !important;
-        left: 2rem;
-      }
-    }
-  }
-  footer{
-    margin-top: 10rem;
-    .footer-link{
-      flex-direction: column !important;
-      .footer-nav-link{
-        margin-top: 2rem;
-      }
-    }
-   
-  }
+  @include mobile-responsive;
 }
 
 // Medium screens (e.g., landscape smartphones)
 @media (min-width: 577px) and (max-width: 768px){
-  .header-section{
-    .nav{
-      .nav-list-container{
-        flex-direction: column !important;
-        margin: 0 auto;
-        margin-top: 3rem;
-        display: none !important;
-      }
-      .nav-list{
-        flex-direction: column !important;
-        align-items: center;
-        margin: 0 auto;
-      }
-      .hamburger-menu{
-        display: block !important;
-      }
-    }
-    .hero-section{
-    grid-template-columns: 1fr !important;
-    .hero-text{
-      width: 100% !important;
-      margin-bottom: 4rem;
-    }
-    .other-amount{
-      span{
-        left: 48rem !important;
-      }
-    }
-    }
-  }
-  //
-  .fund {
-    .wrapper {
-      grid-template-columns: 1fr !important;
-    }
-  }
-  //
-  .map{
-    .collected-donation{
-        & > div{
-          width: 40% !important;
-        }     
-    }
-  }
-  //
-  .blog{
-    grid-template-columns: repeat(1,1fr) !important;
-    .multitask{
-      .team,.school-bench{
-      padding: 6rem 3rem;
-      }
-      .school-bench{
-        margin-top: 2rem;
-      }
-      h2{
-        top: 5rem !important;
-        left: 2rem;
+    @include mobile-responsive;
+    .header-section{
+      .hero-section{
+        .other-amount{
+          span{
+            left: 48rem !important;
+          }
+        }
       }
     }
   }
-  footer{
-    margin-top: 10rem;
-    .footer-link{
-      flex-direction: column !important;
-      .footer-nav-link{
-        margin-top: 2rem;
-      }
-    }
-   
-  }
-
-}
 
 // Large screens (e.g., small tablets)
 @media (min-width: 769px) and (max-width: 991px){
@@ -182,8 +40,3 @@
   }
 }
 
-// Laptops
-@media (min-width: 992px) and (max-width: 1199px){}
-
-// Large desktops
-@media (min-width: 1200px){}
