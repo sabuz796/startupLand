@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>StartupLand</title>
+    <!-- counter up js  -->
     <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js"></script>
     <!-- icon pack  -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -23,9 +24,10 @@
     <header class="header-section">
       <div class="wrapper">
         <nav class="nav">
-          <div>
-            <img src="./img/logo.png" alt="" />
-            <ul class="nav-list">
+          <img src="./img/logo.png" alt="" />
+          <i class="hamburger-menu ph ph-list"></i>
+          <ul class="nav-list-container">
+            <ul class="nav-list nav-list-link">
               <li><a href="">Home</a></li>
               <li><a href="">Adversite</a></li>
               <li><a href="">Supports</a></li>
@@ -34,12 +36,12 @@
                 <a href=""><i class="ph ph-magnifying-glass"></i></a>
               </li>
             </ul>
-          </div>
-          <ul class="nav-list">
-            <li>
-              <a href=""><i class="lock ph ph-lock-open"></i>Login</a>
-            </li>
-            <li><a class="btn nav-btn" href="">Donate now</a></li>
+            <ul class="nav-list nav-list-login">
+              <li>
+                <a href=""><i class="lock ph ph-lock-open"></i>Login</a>
+              </li>
+              <li><a class="btn nav-btn" href="">Donate now</a></li>
+            </ul>
           </ul>
         </nav>
         <main class="hero-section">

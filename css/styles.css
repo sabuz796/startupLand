@@ -1,4 +1,82 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap");
+@media (max-width: 576px) {
+  .header-section .nav .nav-list-container {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    margin: 0 auto;
+    margin-top: 3rem;
+    display: none !important;
+  }
+  .header-section .nav .nav-list {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 auto;
+  }
+  .header-section .nav .hamburger-menu {
+    display: block !important;
+  }
+  .header-section .hero-section {
+    -ms-grid-columns: 1fr !important;
+        grid-template-columns: 1fr !important;
+  }
+  .header-section .hero-section .hero-text {
+    width: 100% !important;
+    margin-bottom: 4rem;
+  }
+  .header-section .hero-section .other-amount span {
+    left: 32rem !important;
+  }
+  .service-section .services {
+    -ms-grid-columns: (1fr)[2] !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .counter-section {
+    gap: 2rem;
+    -ms-grid-columns: (1fr)[2] !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .fund .wrapper {
+    -ms-grid-columns: 1fr !important;
+        grid-template-columns: 1fr !important;
+  }
+  .map .collected-donation > div {
+    width: 50% !important;
+  }
+  .blog {
+    -ms-grid-columns: (1fr)[1] !important;
+        grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .blog .multitask .team, .blog .multitask .school-bench {
+    padding: 6rem 3rem;
+  }
+  .blog .multitask .school-bench {
+    margin-top: 2rem;
+  }
+  .blog .multitask h2 {
+    top: 5rem !important;
+    left: 2rem;
+  }
+  footer {
+    margin-top: 10rem;
+  }
+  footer .footer-link {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  footer .footer-link .footer-nav-link {
+    margin-top: 2rem;
+  }
+}
+
 .wrapper {
   width: 80%;
   max-width: 120rem;
@@ -23,15 +101,34 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify !important;
+      -ms-flex-pack: justify !important;
+          justify-content: space-between !important;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.header-section .nav .nav-list-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  width: 65%;
 }
 
-.header-section .nav > div {
+.header-section .nav .nav-list-container .nav-list-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,13 +136,13 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  gap: 2rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 6rem;
 }
 
-.header-section .nav .nav-list {
+.header-section .nav .nav-list-container .nav-list-login {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -53,24 +150,30 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   gap: 2rem;
 }
 
-.header-section .nav .nav-list .lock {
-  margin-right: 0.6rem;
+.header-section .nav .nav-list-container .nav-list-login > * {
   display: inline-block;
-  -webkit-transform: translateY(0.2rem);
-          transform: translateY(0.2rem);
 }
 
-.header-section .nav .nav-list .nav-btn {
+.header-section .nav .nav-list-container .nav-btn {
   background-color: #A29BFE;
   color: white;
   padding: 1rem 2rem;
   border-radius: 0.4rem;
+}
+
+.header-section .nav .hamburger-menu {
+  display: none;
+  font-size: 3.2rem;
+  cursor: pointer;
+}
+
+.header-section .nav .menu-show {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
 }
 
 .header-section .hero-section {
@@ -115,10 +218,6 @@ body {
   background-color: rgba(162, 155, 254, 0.6);
 }
 
-.header-section .hero-section form .donate-amount input:focus {
-  color: red;
-}
-
 .header-section .hero-section form .other-amount input {
   padding-left: 1rem;
   height: 4rem;
@@ -126,14 +225,18 @@ body {
   border: 0;
   outline: 0;
   border: 1px solid grey;
+  width: 100%;
+  margin-top: 1rem;
 }
 
 .header-section .hero-section form .other-amount span {
   position: relative;
-  right: 4rem;
+  left: 28rem;
+  bottom: 3rem;
 }
 
 .header-section .hero-section form .donate-btn-section {
+  margin-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -24,3 +24,11 @@ const counterElements = document.querySelectorAll(".counter");
 counterElements.forEach((el) => {
   IO.observe(el);
 });
+
+const hamburgerMenu = document.querySelector(".hamburger-menu");
+const navContainer = document.querySelector(".nav-list-container");
+
+hamburgerMenu.addEventListener("click", () => {
+  hamburgerMenu.classList.toggle("ph-x");
+  navContainer.classList.toggle("menu-show");
+});

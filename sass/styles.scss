@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap");
-
 @import "./_variables";
 @import "./_mixin";
+@import "./responsive";
 
 // pre styling
 .wrapper {
@@ -23,31 +23,39 @@ body {
   .nav {
     padding: 2rem 0;
     @include d-flex(row);
-    justify-content: space-between;
     align-items: center;
-
-    & > div {
+    justify-content: space-between !important;
+    flex-wrap: wrap;
+    .nav-list-container {
       @include d-flex(row);
       align-items: center;
-      gap: 6rem;
-    }
-
-    .nav-list {
-      @include d-flex(row);
-      align-items: center;
-      gap: 2rem;
-
-      .lock {
-        margin-right: 0.6rem;
-        display: inline-block;
-        transform: translateY(0.2rem);
+      justify-content: space-between;
+      width: 65%;
+      .nav-list-link{
+        @include d-flex(row);
+        gap: 2rem;
+        align-items: center 
       }
-
+      .nav-list-login{
+        & > *{
+          display: inline-block
+        }
+        @include d-flex(row);
+        gap: 2rem;
+      }
       .nav-btn {
         @include btn;
         padding: 1rem 2rem;
         border-radius: 0.4rem;
       }
+    }
+    .hamburger-menu{
+      display: none;
+      font-size: 3.2rem;
+      cursor: pointer;
+    }
+    .menu-show{
+      display: flex !important;
     }
   }
 
@@ -91,9 +99,9 @@ body {
           background-color: rgba(162, 155, 254, 0.6);
         }
 
-        input:focus {
-          color: red;
-        }
+        // input:focus {
+        //   color: red;
+        // }
       }
 
       .other-amount {
@@ -105,14 +113,18 @@ body {
           border: 0;
           outline: 0;
           border: 1px solid grey;
+          width: 100%;
+          margin-top: 1rem;
         }
         span{
           position: relative;
-          right: 4rem;
+          left: 28rem;
+          bottom: 3rem;
         }
       }
 
       .donate-btn-section {
+        margin-top: 2rem;
         @include d-flex(column);
         span {
           text-align: center;
@@ -287,15 +299,16 @@ body {
       background-size: cover;
       height: 50%;
       width: 100%;
+     
       color: white;
       border-radius: 1rem;
+      margin-top: 4rem;
       h2 {
         position: relative;
         top: 16rem;
         left: 2rem;
         font-size: 1.8rem;
       }
-      margin-top: 4rem;
     }
   }
 }
